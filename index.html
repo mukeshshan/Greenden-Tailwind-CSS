@@ -12,17 +12,17 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
 </head>
 
 <body>
-    <!--Navbar-->
+    <!-- Desktop Navbar-->
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl">GREENDEN</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-6 md:hidden">
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
 
         <ul class="flex gap-5 text-gray-600 hidden md:flex">
-                        <li>
+            <li>
                 <a class="hover:underline hover:text-black" href="./index.html">Home</a>
             </li>
             <li>
@@ -33,6 +33,25 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
             </li>
         </ul>
     </nav>
+    <!--Side Navbar-->
+    <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000 "
+        style="width: 50%; height: 100vh; right: -50%;">
+        <div class="text-right p-5">
+            <p id="closenav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col gap-10 items-center text-gray-600">
+            <li>
+                <a class="hover:underline hover:text-black" href="./index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="./products.html">Products</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="./contact.html">Contact</a>
+            </li>
+        </ul>
+        </nav>
+    </section>
     <!--Header-->
     <section class="bg-green-100 p-4 md:p-6 flex justify-center">
         <div>
@@ -107,71 +126,77 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
 
 
     </section>
-<!--Best Seller-->
-<section class="p-4 text-center">
-    <h1 class="font-bold mt-5 mb-5 text-3xl">Best Seller</h1>
-<div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
-    <div class="hover:shadow-2xl inline transform hover:-translate-y-2">
-        <img src="./images/best-seller-01.png" class="inline" alt="Image 1">
-        <h1>Bismarck Palm</h1>
-        <p class="font-medium">$59</p>
-    </div>
-    <div class="hover:shadow-2xl inline transform hover:-translate-y-2">
-        <img src="./images/best-seller-02.png" class="inline" alt="Image 2">
-        <h1>Haworthia Limifolia</h1>
-        <p class="font-medium">$49</p>
-    </div>
-    <div class="hover:shadow-2xl inline transform hover:-translate-y-2">
-        <img src="./images/best-seller-03.png" class="inline" alt="Image 3">
-        <h1>Indoor Alfie Silver Ombre</h1>
-        <p class="font-medium">$39</p>
-    </div>
-    <div class="hover:shadow-2xl inline transform hover:-translate-y-2">
-        <img src="./images/best-seller-04.png" class="inline" alt="Image 4">
-        <h1>Panda Plant</h1>
-        <p class="font-medium">$29</p>
-    </div>
-</div>
-</section>
-<!--Customer Reviews-->
-<section class="p-4">
-<h1 class="text-3xl font-bold mt-5 mb-5 text-center">Customer Reviews</h1>
-<div class="flex flex-col gap-5 justify-center m-5">
-<div class="bg-green-800 p-3 Container">
-    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga explicabo deserunt nam aspernatur totam voluptates ipsam enim, veritatis illum id. Nam amet tempore ab libero dicta dolor. Beatae, fugit culpa.</p>
-<h2 class="text-yellow-200 font-medium">Genny Mathew</h2>
-</div>
-<div class="bg-green-800 p-3 Container">
-    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga explicabo deserunt nam aspernatur totam voluptates ipsam enim, veritatis illum id. Nam amet tempore ab libero dicta dolor. Beatae, fugit culpa.</p>
-<h2 class="text-yellow-200 font-medium">Jim</h2>
-</div>
-<div class="bg-green-800 p-3 Container">
-    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga explicabo deserunt nam aspernatur totam voluptates ipsam enim, veritatis illum id. Nam amet tempore ab libero dicta dolor. Beatae, fugit culpa.</p>
-<h2 class="text-yellow-200 font-medium">Parker</h2>
-</div>
+    <!--Best Seller-->
+    <section class="p-4 text-center">
+        <h1 class="font-bold mt-5 mb-5 text-3xl">Best Seller</h1>
+        <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
+            <div class="hover:shadow-2xl inline transform hover:-translate-y-2">
+                <img src="./images/best-seller-01.png" class="inline" alt="Image 1">
+                <h1>Bismarck Palm</h1>
+                <p class="font-medium">$59</p>
+            </div>
+            <div class="hover:shadow-2xl inline transform hover:-translate-y-2">
+                <img src="./images/best-seller-02.png" class="inline" alt="Image 2">
+                <h1>Haworthia Limifolia</h1>
+                <p class="font-medium">$49</p>
+            </div>
+            <div class="hover:shadow-2xl inline transform hover:-translate-y-2">
+                <img src="./images/best-seller-03.png" class="inline" alt="Image 3">
+                <h1>Indoor Alfie Silver Ombre</h1>
+                <p class="font-medium">$39</p>
+            </div>
+            <div class="hover:shadow-2xl inline transform hover:-translate-y-2">
+                <img src="./images/best-seller-04.png" class="inline" alt="Image 4">
+                <h1>Panda Plant</h1>
+                <p class="font-medium">$29</p>
+            </div>
+        </div>
+    </section>
+    <!--Customer Reviews-->
+    <section class="p-4">
+        <h1 class="text-3xl font-bold mt-5 mb-5 text-center">Customer Reviews</h1>
+        <div class="flex flex-col gap-5 justify-center m-5">
+            <div class="bg-green-800 p-3 Container">
+                <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga explicabo deserunt
+                    nam aspernatur totam voluptates ipsam enim, veritatis illum id. Nam amet tempore ab libero dicta
+                    dolor. Beatae, fugit culpa.</p>
+                <h2 class="text-yellow-200 font-medium">Genny Mathew</h2>
+            </div>
+            <div class="bg-green-800 p-3 Container">
+                <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga explicabo deserunt
+                    nam aspernatur totam voluptates ipsam enim, veritatis illum id. Nam amet tempore ab libero dicta
+                    dolor. Beatae, fugit culpa.</p>
+                <h2 class="text-yellow-200 font-medium">Jim</h2>
+            </div>
+            <div class="bg-green-800 p-3 Container">
+                <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga explicabo deserunt
+                    nam aspernatur totam voluptates ipsam enim, veritatis illum id. Nam amet tempore ab libero dicta
+                    dolor. Beatae, fugit culpa.</p>
+                <h2 class="text-yellow-200 font-medium">Parker</h2>
+            </div>
 
-</div>
-
-
-
-</section>
-<!--News Letter-->
-<section class="text-center">
-    <h1 class="font-bold text-3xl">Join our News Letter</h1>
-    <p>Singup for our email newspaper to get exclusive discouns, updates, and more</p>
-    <input type="text" class="border border-black p-2 m-3" style="width: 80%;">
-    <br>
-
-    <button class="bg-black text-white p-3 m-1 underline rounded">Subscribe</button>
-</section>
-<!--Footer-->
-<section class="bg-green-100 p-3 mt-5">
-    <h1 class="text-3xl font-bold m-3">Greenden</h1>
-    <p class="m-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, itaque.</p>
-    <p class="m-3">&copy; 2026 Greenden.com</p>
-</section>
+        </div>
 
 
+
+    </section>
+    <!--News Letter-->
+    <section class="text-center">
+        <h1 class="font-bold text-3xl">Join our News Letter</h1>
+        <p>Singup for our email newspaper to get exclusive discouns, updates, and more</p>
+        <input type="text" class="border border-black p-2 m-3" style="width: 80%;">
+        <br>
+
+        <button class="bg-black text-white p-3 m-1 underline rounded">Subscribe</button>
+    </section>
+    <!--Footer-->
+    <section class="bg-green-100 p-3 mt-5">
+        <h1 class="text-3xl font-bold m-3">Greenden</h1>
+        <p class="m-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, itaque.</p>
+        <p class="m-3">&copy; 2026 Greenden.com</p>
+    </section>
+
+    <script src="index.js"> </script>
 </body>
 
 </html>
